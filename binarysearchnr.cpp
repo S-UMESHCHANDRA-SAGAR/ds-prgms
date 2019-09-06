@@ -9,6 +9,8 @@ cout<<"enter"<<n<<"elements in ascending order";
 for(i=0;i<n;i++)
 cin>>list[i];
 cout<<"enter key to search";
+pos=mid;
+}
 cin>>key;
 pos=binary_search(list,key,0,n-1);
 if(pos==-1)
@@ -28,7 +30,9 @@ pos=mid;
 break;
 }
 else if(key<list[mid])
-low=mid+1;
+high=mid-1;
+else
+ low=mid=1;   
 }
 return 0;
 }
